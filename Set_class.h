@@ -21,8 +21,8 @@ public:
     void remove_elem(const T&);
     void clear();
     
-    Set& operator=(const Set<T>&);
-    Set operator+(const Set<T>&) const;
+    Set<T>& operator=(const Set<T>&);
+    Set<T> operator+(const Set<T>&) const;
     bool operator==(const Set<T>&) const;
     T operator[](int) const;
     
