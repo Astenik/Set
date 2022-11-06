@@ -8,7 +8,6 @@ class Set
 public:
     Set();
     Set(const Set<T>&);
-    Set(const Set<T>&&);
     ~Set();
 
 public:
