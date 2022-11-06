@@ -7,25 +7,26 @@ class Set
 {
 public:
     Set();
-    Set(const Set&);
-    Set(const Set&&);
+    Set(const Set<T>&);
+    Set(const Set<T>&&);
     ~Set();
 
 public:
     int size() const;
     bool empty() const;
-    friend void print(const Set&);
+    void print() const;
+    int contain(const T&) const;
     
     void insert(const T&);
     void remove_elem(const T&);
     void clear();
     
-    Set& operator=(const Set&);
-    Set operator+(const Set&) const;
-    bool operator==(const Set&) const;
+    Set& operator=(const Set<T>&);
+    Set operator+(const Set<T>&) const;
+    bool operator==(const Set<T>&) const;
     T operator[](int) const;
     
-print:
+private:
     Node<T>* m_head;
     Node<T>* m_back;
     int m_size;
